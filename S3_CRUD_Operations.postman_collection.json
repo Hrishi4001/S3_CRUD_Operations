@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "ababb32a-9673-41da-91c2-c5e04300b6d9",
+		"name": "S3_CRUD_Operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28511249"
+	},
+	"item": [
+		{
+			"name": "StoreObject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "sample.txt",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/bucket/mybucket/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bucket",
+						"mybucket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "StoreObject",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "sample.txt",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/bucket/mybucket/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bucket",
+								"mybucket"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200
+				}
+			]
+		},
+		{
+			"name": "GetObject",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bucket/mybucket/sample.txt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bucket",
+						"mybucket",
+						"sample.txt"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetObject",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bucket/mybucket/sample.txt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bucket",
+								"mybucket",
+								"sample.txt"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"body": "Sample file"
+				}
+			]
+		},
+		{
+			"name": "DeleteObject",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bucket/mybucket/sample.txt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bucket",
+						"mybucket",
+						"sample.txt"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DeleteObject",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bucket/mybucket/sample.txt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bucket",
+								"mybucket",
+								"sample.txt"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json"
+				}
+			]
+		},
+		{
+			"name": "ListBucketObjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bucket/mybucket/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bucket",
+						"mybucket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ListBucketObjects",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bucket/mybucket/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bucket",
+								"mybucket"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json"
+				}
+			]
+		},
+		{
+			"name": "ListBuckets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bucket/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bucket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ListBuckets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bucket/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bucket"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json"
+				}
+			]
+		}
+	]
+}
